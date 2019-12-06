@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 
 client = discord.Client()
 
@@ -23,6 +24,8 @@ async def on_message(message):
         for i in range(0, len(person)):
             await message.channel.send(person[i] + "---->" + teamname[i])
 
-client.run("NjUyNTExMDAwODA0OTgyNzk0.XepggQ.zzb0lGE-FrQBCnz6iu3JdVHgT90")
+            
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
